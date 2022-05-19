@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/wave.css">
     <title>Iniciar Sesión</title>
 </head>
 <body>
@@ -24,13 +25,24 @@
                 <div class="pass">
                     <a href="#">Forgot Password?</a>
                 </div>
-                <div class="field">
+                <!-- <div class="field">
                     <button class="btn btn-default button" type="submit" onclick="login()">Iniciar Sesión</button>
-                    <!-- <input type="submit" value="LOGIN"> -->
-                </div>
+                </div> -->
+                <div id="container">
+                    <button class="learn-more" type="submit" onclick="enviar()">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">Iniciar Sesión</span>
+                    </button>
+                  </div>
             </form>
         </div>
+        <section>
+            <div class="wave"></div>
+        </section>
     </div>
+
     
     
 </body>
