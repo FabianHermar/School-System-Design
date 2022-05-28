@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap');
 
-:root{
+:root {
     --color-primary: #deb887;
     --color-danger: #ff7782;
     --color-sucess: #41f1b6;
@@ -26,7 +26,7 @@
     --box-shadow: 0 1rem 1rem var(--color-light);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -37,11 +37,11 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 14px;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     font-family: poppins,sans-serif;
@@ -52,7 +52,7 @@ body{
     overflow-x: hidden;
 }
 
-.container{
+.container {
     display: grid;
     width: 96%;
     margin: 0 auto;
@@ -60,109 +60,109 @@ body{
     grid-template-columns: 14rem auto 23rem;
 }
 
-a{
+a {
     color: var(--color-dark);
     width: 100%;
 }
 
-h1{
+h1 {
     font-weight: 800;
     font-size: 1.8rem;
 }
 
-h2{
+h2 {
     font-size: 1.4rem;
 }
 
-h3{
+h3 {
     font-size: 0.87rem
     
 }
 
-h4{
+h4 {
     font-size: 0.8rem;
 }
 
-h5{
+h5 {
     font-size: 0.77rem;
 }
 
-small{
+small {
     font-size: 0.75rem;
 }
 
-.profile-photo{
+.profile-photo {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     overflow: hidden;
 }
 
-.text-muted{
+.text-muted {
     color: var(--color-info-dark);
 }
 
-p{
+p {
     color: var(--color-dark-variant);
 }
 
-b{
+b {
     color: var(--color-dark);
 }
 
-.primary{
+/* .primary {
     color: var(--color-primary);
 }
 
-.danger{
+.danger {
     color: var(--color-danger);
 }
 
-.sucess{
+.sucess {
     color: var(--color-sucess);
 }
 
-.warning{
+.warning {
     color: var(--color-warning);
-}
+} */
 
-aside{
+aside {
     height: 100vh;
 }
 
-aside .top{
+aside .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 1.4rem;
 }
 
-aside .logo{
+aside .logo {
     display: flex;
     gap: 0.8rem;
 }
 
-aside .logo img{
+aside .logo img {
     width: 3.5rem;
     height: 3.5rem;
     filter: drop-shadow(0.1rem 0.1rem 0.350rem rgb(0, 0, 0));
 }
 
-aside .logo h2{
+aside .logo h2 {
     justify-content: center;
     align-items: center;
     margin-top: 0.4rem;
     font-size: 1.5rem;
 }
 
-aside .close{
+aside .close {
     display: none;
 
 }
 
 /* SIDEBAR */
 
-aside .sidebar{
+aside .sidebar {
     display: flex;
     flex-direction: column;
     height: 86vh;
@@ -170,11 +170,11 @@ aside .sidebar{
     top: 3rem;
 }
 
-aside h3{
+aside h3 {
     font-weight: 500;
 }
 
-aside .sidebar a{
+aside .sidebar a {
     display: flex;
     color: var(--color-info-dark);
     margin-left: 2rem;
@@ -185,46 +185,46 @@ aside .sidebar a{
     transition: all 300ms ease;
 }
 
-aside .sidebar a span{
+aside .sidebar a span {
     font-size: 1.6rem;
     transition: all 300ms ease;
 }
 
-aside .sidebar a:last-child{
+aside .sidebar a:last-child {
     position: absolute;
     bottom: 2rem;
     width: 100;
 }
 
-aside .sidebar a:active{
+aside .sidebar a:active {
     background: var(--color-light);
     color: var(--color-primary);
     margin-left: 0;
 }
 
-aside .sidebar a.active:before{
+aside .sidebar a.active:before {
     content: '';
     width: 6px;
     height: 100%;
     background: var(--color-primary);
 }
 
-aside .sidebar a.active span{
+aside .sidebar a.active span {
     color: var(--color-primary);
     margin-left: calc(1rem - 3px);
 }
 
-aside .sidebar a:hover{
+aside .sidebar a:hover {
     color: var(--color-primary)
 }
 
-aside .sidebar a:hover span{
+aside .sidebar a:hover span {
     margin-left: 1rem;
 }
 
 /* main */
 
-main{
+main {
     margin-top: 1.5rem;
 }
 
@@ -243,11 +243,11 @@ main .insights a > div {
     transition: all 300ms ease;
 }
 
-main .insights a > div:hover{
+main .insights a > div:hover {
     box-shadow: none;
 }
 
-main .insights a > div span{
+main .insights a > div span {
     background-color: var(--color-primary);
     padding: 0.5rem;
     border-radius: 50%;
@@ -255,30 +255,21 @@ main .insights a > div span{
     font-size: 2rem;
 }
 
-main .insights a > div.payments span{
+main .insights a > div.payments span {
     background: var(--color-danger);
 }
 
-main .insights a > div.teachers span{
+main .insights a > div.teachers span {
     background: var(--color-sucess);
 }
 
-main .insights a > div.reports span{
+main .insights a > div.reports span {
     background: var(--color-atention)
 }
 
-main .insights a > div.students h3{
-    margin-top: 1rem;
+main .insights h3 {
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
 }
 
-main .insights a > div.payments h3{
-    margin-top: 1rem;
-}
 
-main .insights a > div.reports h3{
-    margin-top: 1rem;
-}
-
-main .insights a > div.teachers h3{
-    margin-top: 1rem;
-}

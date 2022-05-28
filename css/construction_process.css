@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(25, 145, 220, 0.267);
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+}
+
+div img {
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0.01rem 1px 0.20rem rgb(56, 53, 53));
+}
+
+div a {
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 30px
+
+}
+
+
+.dotting {
+    display: inline-block;
+    width: 34px;
+    min-height: 10px;
+    padding-right: 2px;
+    border-left: 10px solid currentColor;
+    border-right: 10px solid currentColor;
+    background-color: currentColor;
+    -webkit-background-clip: border-box;
+    background-clip: content-box;
+    box-sizing: border-box;
+    -webkit-animation: dot 2s infinite step-start both;
+    animation: dot 2s infinite step-start both;
+}
+
+.dotting:before {
+    content: '...';
+}
+
+.dotting::before {
+    content: '';
+}
+
+:root .dotting {
+    margin-left: 3px;
+    padding-left: 2px;
+}
+
+@-webkit-keyframes dot {
+    25% {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    50% {
+        border-right-color: transparent;
+        background-color: transparent;
+    }
+
+    75% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes dot {
+    25% {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    50% {
+        border-right-color: transparent;
+        background-color: transparent;
+    }
+
+    75% {
+        border-right-color: transparent;
+    }
+}
