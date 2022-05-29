@@ -20,7 +20,7 @@
     --border-radius-2: 0.8rem;
     --border-radius-3: 1.2rem;
 
-    --card-padding:1.8rem;
+    --card-padding: 1.8rem;
     --padding-1: 1.2rem;
 
     --box-shadow: 0 1rem 1rem var(--color-light);
@@ -44,7 +44,7 @@ html {
 body {
     width: 100vw;
     height: 100vh;
-    font-family: poppins,sans-serif;
+    font-family: poppins, sans-serif;
     font-size: 0.88rem;
     background: var(--color-background);
     -webkit-user-select: none;
@@ -76,7 +76,6 @@ h2 {
 
 h3 {
     font-size: 0.87rem
-    
 }
 
 h4 {
@@ -110,7 +109,7 @@ b {
     color: var(--color-dark);
 }
 
-/* .primary {
+.primary {
     color: var(--color-primary);
 }
 
@@ -124,7 +123,7 @@ b {
 
 .warning {
     color: var(--color-warning);
-} */
+}
 
 aside {
     height: 100vh;
@@ -234,7 +233,7 @@ main .insights {
     gap: 2.5rem;
 }
 
-main .insights a > div {
+main .insights a>div {
     background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -243,11 +242,11 @@ main .insights a > div {
     transition: all 300ms ease;
 }
 
-main .insights a > div:hover {
+main .insights a>div:hover {
     box-shadow: none;
 }
 
-main .insights a > div span {
+main .insights a>div span {
     background-color: var(--color-primary);
     padding: 0.5rem;
     border-radius: 50%;
@@ -255,15 +254,15 @@ main .insights a > div span {
     font-size: 2rem;
 }
 
-main .insights a > div.payments span {
+main .insights a>div.payments span {
     background: var(--color-danger);
 }
 
-main .insights a > div.teachers span {
+main .insights a>div.teachers span {
     background: var(--color-sucess);
 }
 
-main .insights a > div.reports span {
+main .insights a>div.reports span {
     background: var(--color-atention)
 }
 
@@ -272,4 +271,176 @@ main .insights h3 {
     font-size: 1rem;
 }
 
+.right {
+    margin-top: 1.4rem;
+}
 
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right .theme-toggle {
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.right .theme-toggle span {
+    font-size: 1.2rem;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .theme-toggle span.active {
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right .top .profile {
+    display: flex;
+    gap: 2rem;
+    text-align: right
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2 {
+        display: none;
+    }
+
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    aside .sidebar a {
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.6rem;
+    }
+
+    main .insights {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        position: fixed;
+        left: -100%;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+        animation: showMenu 300ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
+    }
+
+    aside .logo {
+        margin-left: 1rem;
+    }
+
+    aside .logo h2 {
+        display: inline-block;
+    }
+
+    aside .sidebar h3 {
+        display: inline;
+    }
+
+    aside .sidebar a {
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .close {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main {
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    .right {
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: var(--color-white);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
+
+    .right .top .theme-toggle {
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+
+    .right .profile .info {
+        display: none;
+    }
+
+    .right .top button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right .top button span {
+        font-size: 2rem;
+    }
+}

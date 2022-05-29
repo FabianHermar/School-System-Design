@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="shortcut icon" href="img/Instituto_Niels_Borh.png">
     <title>Administrador</title>
 </head>
+
 <body>
     <div class="container">
         <aside>
@@ -21,23 +24,23 @@
                 </div>
             </div>
             <div class="sidebar">
-                <a href="#">
+                <a href="#" class="active">
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="./src/admin_student.html" class="active">
-                    <span class="material-icons-sharp">person</span>
+                <a href="./pages/admin_student.html" class="">
+                    <span class="material-icons-sharp">groups</span>
                     <h3>Alumnos</h3>
                 </a>
-                <a href="./src/payments.html">
+                <a href="./pages/payments.html">
                     <span class="material-icons-sharp">payments</span>
                     <h3>Pagos</h3>
                 </a>
-                <a href="./src/admin_teachers.html">
+                <a href="./pages/admin_teachers.html">
                     <span class="material-icons-sharp">person</span>
                     <h3>Maestros</h3>
                 </a>
-                <a href="./src/reports.html">
+                <a href="./pages/reports.html">
                     <span class="material-icons-sharp">auto_stories</span>
                     <h3>Reportes</h3>
                 </a>
@@ -48,11 +51,11 @@
             </div>
         </aside>
         <!-- Final de aside -->
-        
+
         <main>
             <h1>Dashboard</h1>
             <div class="insights">
-                <a href="./src/admin_student.html">
+                <a href="./pages/admin_student.html">
                     <div class="students">
                         <span class="material-icons-sharp">groups</span>
                         <div class="middle">
@@ -63,8 +66,8 @@
                         </div>
                     </div>
                 </a>
-                
-                <a href="./src/payments.html">
+
+                <a href="./pages/payments.html">
                     <div class="payments">
                         <span class="material-icons-sharp">payments</span>
                         <div class="middle">
@@ -75,8 +78,8 @@
                         </div>
                     </div>
                 </a>
-                
-                <a href="./src/admin_teachers.html">
+
+                <a href="./pages/admin_teachers.html">
                     <div class="teachers">
                         <span class="material-icons-sharp">person</span>
                         <div class="middle">
@@ -87,8 +90,8 @@
                         </div>
                     </div>
                 </a>
-                
-                <a href="./src/reports.html">
+
+                <a href="./pages/reports.html">
                     <div class="reports">
                         <span class="material-icons-sharp">auto_stories</span>
                         <div class="middle">
@@ -99,10 +102,38 @@
                         </div>
                     </div>
                 </a>
-                
+
             </div>
         </main>
-        
+
+        <!-- Menu -->
+
+        <div class="right">
+            <div class="top">
+                <button>
+                    <div id="menu-btn">
+                        <span class="material-icons-sharp">menu</span>
+                    </div>
+                </button>
+                <div class="theme-toggle">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Fabian</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="img/Instituto_Niels_Borh.png" width="37px" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
