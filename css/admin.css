@@ -23,8 +23,21 @@
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
 
-    --box-shadow: 0 1rem 1rem var(--color-light);
+    --box-shadow: 1rem 1rem 1rem var(--color-light);
 }
+
+/* Dark Theme Variables */
+
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(47, 47, 52, 0.18);
+    --box-shadow: 1rem 2rem 2rem var(--color-light);
+}
+
+
 
 * {
     margin: 0;
@@ -68,10 +81,12 @@ a {
 h1 {
     font-weight: 800;
     font-size: 1.8rem;
+    color: var(--color-dark);
 }
 
 h2 {
     font-size: 1.4rem;
+    color: var(--color-dark);
 }
 
 h3 {
@@ -290,6 +305,7 @@ main .insights h3 {
     width: 4.2rem;
     cursor: pointer;
     border-radius: var(--border-radius);
+    color: var(--color-dark);
 }
 
 .right .theme-toggle span {
@@ -311,6 +327,10 @@ main .insights h3 {
     display: flex;
     gap: 2rem;
     text-align: right
+}
+
+.right #menu-btn {
+    display: none;
 }
 
 /* Media Queries */
@@ -442,5 +462,9 @@ main .insights h3 {
 
     .right .top button span {
         font-size: 2rem;
+    }
+
+    .right #menu-btn {
+        display: inline-block;
     }
 }
