@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap');
 
+
 :root {
     --color-primary: #deb887;
     --color-danger: #ff7782;
@@ -110,6 +111,7 @@ small {
     height: 2.8rem;
     border-radius: 50%;
     overflow: hidden;
+    margin-right: 0.5rem;
 }
 
 .text-muted {

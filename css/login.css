@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Mukta:700");
 
 *{
@@ -186,21 +186,3 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
   color: rgb(0, 0, 0);
 }
-
-/* .field button[type="submit"]{
-  background: #7434db;
-  box-shadow: 0 2px 5px black;
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  letter-spacing: .5px;
-  font-family: 'Montserrat',sans-serif;
-  border-radius: 20px;
-  transition: all 0.2s ease-in-out;
-}
-.field button[type="submit"]:hover{
-  background: #8034db;
-} */
