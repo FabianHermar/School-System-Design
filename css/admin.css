@@ -56,7 +56,7 @@ html {
 }
 
 body {
-    width: 100vw;
+    width: 120vw;
     height: 100vh;
     font-family: poppins, sans-serif;
     font-size: 0.88rem;
@@ -255,6 +255,7 @@ main .insights a>div {
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin-top: 2rem;
+
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
 }
@@ -295,7 +296,8 @@ main .insights h3 {
 .right .top {
     display: flex;
     justify-content: end;
-    gap: 2rem;
+    gap: 4rem;
+    margin-right: 290px;
 }
 
 .right .theme-toggle {
@@ -313,7 +315,7 @@ main .insights h3 {
 .right .theme-toggle span {
     font-size: 1.2rem;
     height: 100%;
-    width: 50%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -328,7 +330,7 @@ main .insights h3 {
 .right .top .profile {
     display: flex;
     gap: 2rem;
-    text-align: right
+    text-align: right;
 }
 
 .right #menu-btn {
@@ -338,6 +340,9 @@ main .insights h3 {
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
+    body {
+        width: 100vw;
+    }
     .container {
         width: 94%;
         grid-template-columns: 7rem auto 23rem;
@@ -368,6 +373,9 @@ main .insights h3 {
 
 
 @media screen and (max-width: 768px) {
+    body {
+        width: 100vw;
+    }
     .container {
         width: 100%;
         grid-template-columns: 1fr;
