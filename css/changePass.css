@@ -2,9 +2,14 @@
 @import url("https://fonts.googleapis.com/css?family=Mukta:700");
 @import url('admin.css');
 
-*{
+* {
   margin: 0;
   padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
 }
 
@@ -14,167 +19,245 @@ body {
   height: 100vh;
   font-family: poppins, sans-serif;
   font-size: 0.88rem;
+  background: var(--color-background);
+  -webkit-user-select: none;
+  user-select: none;
+  overflow-x: hidden;
 }
 
 section {
   margin-top: 1.6rem;
 }
 
-section .container {
-  margin: auto;
+.Fields {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-around;
 }
 
-section h1 {
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: var(--color-dark);
-}
-
-
-input[type=password] {
+.Fields div {
+  margin-right: 10px;
   width: 100%;
-  padding: 15px;
-  border-radius: 4px;
-  resize: vertical;
 }
 
 label {
-  padding: 12px 12px 12px 0;
-  position: absolute;
-  margin-top: -15px;
-  margin-left: 50px;
+  margin: 15px;
   color: var(--color-dark);
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
-input[type=password] {
-  padding: 10px 100px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  margin-top: 20px;
+.formContainer {
+  margin: 10px;
+  padding: 5px 20px 15px 20px;
 }
 
-.container {
-  border-radius: 5px;
-  padding: 20px;
+input[type="password"] {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 30px;
+  filter: drop-shadow(0px 3px 3px var(--color-info-light));
+  transition: all 0.2s ease-in-out;
 }
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+input[type="password"]:hover {
+  filter: drop-shadow(0px 0px 0px var(--color-info-light));
 }
 
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+label {
+  margin-left: 20px;
+  display: block;
+  color: var(--color-dark);
 }
 
 
 /* Button */
-* {
-    box-sizing: border-box;
+a.animated-button.thar-three {
+  color: var(--color-dark);
+  cursor: pointer;
+  width: 20%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border: 4px solid burlywood;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+a.animated-button.thar-three:hover {
+  color: var(--color-white) !important;
+  background-color: transparent;
+  text-shadow: nthree;
+}
+
+a.animated-button.thar-three:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+
+a.animated-button.thar-three:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: '';
+  background: burlywood;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 1280px) {
+  a.animated-button.thar-three {
+    width: 80%;
   }
-  *::before, *::after {
-    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 1100px) {
+  .Fields {
+    flex-direction: column;
   }
-  
-  button {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    background: transparent;
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
+
+  .Fields div {
+    margin-right: 0;
   }
-  button.changePassword {
-    width: 12rem;
-    height: auto;
+
+  a.animated-button.thar-three{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
   }
-  button.changePassword .circle {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: relative;
-    display: block;
-    margin: 0;
-    width: 3rem;
-    height: 3rem;
-    background: burlywood;
-    border-radius: 1.625rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .Fields {
+    flex-direction: column;
   }
-  button.changePassword .circle .icon {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: #fff;
+
+  .Fields div {
+    margin-right: 3rem;
+    width: 95%;
   }
-  button.changePassword .circle .icon.arrow {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    left: 0.625rem;
-    width: 1.125rem;
-    height: 0.125rem;
-    background: none;
+
+  section h1 {
+    margin-top: 8rem;
+    padding: 0 2.5rem;
   }
-  button.changePassword .circle .icon.arrow::before {
-    position: absolute;
-    content: "";
-    top: -0.25rem;
-    right: 0.0625rem;
-    width: 0.625rem;
-    height: 0.625rem;
-    border-top: 0.125rem solid rgb(0, 0, 0);
-    border-right: 0.125rem solid rgb(0, 0, 0);
-    transform: rotate(45deg);
+
+  a.animated-button.thar-three{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10rem;
   }
-  button.changePassword .button-text {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
+
+  .right {
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
+
+  .right .top {
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
-    color: var(--color-dark);
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  button:hover .circle {
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    background: var(--color-white);
     width: 100%;
-  }
-  button:hover .circle .icon.arrow {
-    background: rgb(0, 0, 0);
-    transform: translate(1rem, 0);
-  }
-  button:hover .button-text {
-    color: var(--color-white);
+    margin: 0;
+    z-index: 2;
+    box-shadow: 0 1rem 1rem var(--color-light);
   }
 
-
-  /* media queries */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
+  .right .top .theme-toggle {
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
   }
+
+  .right .profile .info {
+    display: none;
+  }
+
+  .right .profile-photo {
+    display: inline-block;
+    margin-right: 12rem;
+  }
+
+  .right .top button {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-dark);
+    position: absolute;
+    left: 1rem;
+  }
+
+  .right .top button span {
+    font-size: 2rem;
+  }
+
+  .right #menu-btn {
+    display: inline-block;
+  }
+}
+
+
+
+
+@media (max-width: 657px) {
+  .Fields {
+    flex-direction: column;
+  }
+
+  .Fields div {
+    margin-right: 1.7rem;
+    width: 95%;
+  }
+
+  section h1 {
+    margin-top: 8rem;
+    padding: 0 2.5rem;
+  }
+
+  a.animated-button.thar-three{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+
+  a.animated-button.thar-three{
+    width: 62%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 9rem;
+  }
+}
+  
