@@ -78,9 +78,9 @@ label {
 a.animated-button.thar-three {
   color: var(--color-dark);
   cursor: pointer;
-  width: 20%;
+  width: 30%;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   justify-content: center;
   align-items: center;
   margin-left: auto;
