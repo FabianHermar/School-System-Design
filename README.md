@@ -1,1 +1,1 @@
-# Diseño de control escolar
+# Diseño de sistema de control escolar
