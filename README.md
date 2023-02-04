@@ -1,1 +1,1 @@
-# School System Design
+# Diseño de control escolar
